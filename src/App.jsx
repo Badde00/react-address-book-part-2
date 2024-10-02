@@ -4,6 +4,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 import ContactsList from "./components/ContactsList";
 import ContactPage from "./components/ContactPage";
 import AddContact from "./components/AddContact";
+import EditContact from "./components/EditContact";
 
 const ContactContext = createContext();
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element={<ContactsList />} />
         <Route path="/add" element={<AddContact />} />
         <Route path="/view/:id" element={<ContactPage />} />
+        <Route path="/edit/:id" element={<EditContact />} />
       </Routes>
     </ContactContext.Provider>
   )
